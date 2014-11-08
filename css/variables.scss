@@ -1,0 +1,25 @@
+
+$header-height:            92px;
+$header-background-color:  #222;
+$header-foreground-color:  #dddfe4;
+
+$nav-height:               72px;
+$nav-font-size:            125%;
+$nav-triangle-size:        8px;
+
+$sidebar-width:            340px;
+$sidebar-height:           36px; // the height of the user info
+$sidebar-padding:          10px;
+$sidebar-margin:           20px;
+$sidebar-offset:           0px;
+
+$sidebar-background-color: #444;
+$sidebar-foreground-color: $header-foreground-color;
+
+$sidebar-user-font-size:   110%;
+
+// GENERAL
+
+$light-color:              rgba(black, 0.2);
+$dark-color:               rgba(black, 0.5);
+$selected-color:           #fd7;

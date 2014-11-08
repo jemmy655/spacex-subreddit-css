@@ -1,0 +1,40 @@
+
+@import 'variables';
+
+@mixin button($color: light) {
+
+  $bg: rgba($light-color, 0.2);
+
+  @if $color == dark {
+    $bg: rgba($dark-color, 0.38);
+  }
+
+  background-image: none !important;
+
+  background-color: $bg !important;
+
+  border: none !important;
+  box-shadow: none !important;
+
+  font-weight: bold !important;
+  text-transform: uppercase;
+
+  transition: background-color 0.05s ease;
+
+  &:hover {
+    background-color: rgba($bg, 0.3) !important;
+  }
+
+  &:active {
+    background-color: rgba($bg, 0.45) !important;
+  }
+
+};
+
+button {
+  @include button();
+
+  color: rgba($dark-color, 0.8);
+
+  padding: 5px 10px !important;
+}

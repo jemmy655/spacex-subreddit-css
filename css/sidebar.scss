@@ -1,0 +1,97 @@
+
+@import 'variables';
+
+@import 'general';
+
+// SIDEBAR and USER INFO
+
+html > body > .side, #header-bottom-right {
+  background-color: $sidebar-background-color !important;
+
+  position: absolute;
+  right: 0;
+  width: 340px !important;
+
+  z-index: 10000;
+}
+
+// USER INFO
+
+#header-bottom-right {
+  line-height: $sidebar-height;
+  vertical-align: middle;
+
+  top: $header-height - $sidebar-offset - $sidebar-height;
+  padding: 0 $sidebar-padding !important;
+
+  font-size: $sidebar-user-font-size !important;
+
+  * {
+    color: rgba($sidebar-foreground-color, 0.75) !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+  }
+
+}
+
+// SIDEBAR
+
+html > body > .side {
+  top: $header-height - $sidebar-offset;
+  right: 0;
+  float: none !important;
+  margin: 0 !important;
+
+  > .spacer {
+    margin: 10px 0;
+    padding: 0 $sidebar-padding !important;
+  }
+
+  * {
+    color: $sidebar-foreground-color !important;
+  }
+
+  input[type=text] {
+    @include input-text(dark);
+    width: 100% !important;
+  }
+
+  // SEARCH (form)
+
+  #search {
+
+    position: relative;
+
+    #searchexpando {
+      background-color: transparent !important;
+
+      border-radius: 0 !important;
+      border: none !important;
+
+    }
+
+  }
+
+  // SUBMIT
+
+  .sidebox.submit {
+
+    // the button itself
+
+    .morelink {
+      @include button(dark);
+    }
+
+  }
+
+  // TITLEBOX (subreddit name, 'you are a moderator', flair)
+
+  .titlebox {
+
+    * {
+      background-color: transparent !important;
+    }
+
+  }
+
+}
